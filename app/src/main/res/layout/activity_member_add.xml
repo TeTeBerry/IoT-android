@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/societyEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/up"
+            android:ems="10"
+            android:hint="Enter your Society Name"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:textColorHint="@android:color/white" />
+
+        <EditText
+            android:id="@+id/areaEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#569adf"
+            android:ems="10"
+            android:hint="Enter your Area"
+            android:inputType="textPersonName"
+            android:padding="5dp"
+            android:textColorHint="@android:color/white" />
+
+        <Spinner
+            android:id="@+id/cityEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#569adf"
+            android:entries="@array/city_names"
+            android:importantForAutofill="auto"></Spinner>
+
+        <EditText
+            android:id="@+id/pincodeEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#569adf"
+            android:ems="10"
+            android:hint="Enter your Pincode"
+            android:inputType="number"
+            android:padding="5dp"
+            android:textColorHint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/userNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#569adf"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:hint="Username"
+            android:padding="5dp"
+            android:textColorHint="@android:color/white"
+            android:textSize="18sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#569adf"
+            android:hint="Enter your Password"
+            android:textColorHint="@android:color/white"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/passwordEt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:padding="5dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/down"
+            android:hint="Re-enter your password"
+            android:textColorHint="@android:color/white"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/confirmPwdEt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:padding="5dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_round"
+            android:text="Register"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</ScrollView>

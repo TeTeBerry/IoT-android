@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/nameEt"
+            style="@style/RoundEditText"
+            android:hint="@string/input_username"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/roomEt"
+            style="@style/RoundEditText"
+            android:layout_marginTop="5dp"
+            android:hint="@string/input_room"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/mailEt"
+            style="@style/RoundEditText"
+            android:layout_marginTop="5dp"
+            android:hint="@string/input_mail"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/telEt"
+            style="@style/RoundEditText"
+            android:layout_marginTop="5dp"
+            android:hint="@string/input_tel"
+            android:inputType="textPhonetic" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/pwdEt"
+                style="@style/RoundEditText"
+                android:hint="@string/input_password"
+                android:inputType="textPassword" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:passwordToggleEnabled="true">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/confirmEt"
+                style="@style/RoundEditText"
+                android:hint="@string/confirm_passowrd"
+                android:inputType="textPassword" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/registerBtn"
+            style="@style/RoundButton"
+            android:layout_marginTop="60dp"
+            android:text="@string/register" />
+
+    </LinearLayout>
+</ScrollView>

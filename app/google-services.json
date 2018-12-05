@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "180559570099",
+    "firebase_url": "https://iot-smart-water-2e339.firebaseio.com",
+    "project_id": "iot-smart-water-2e339",
+    "storage_bucket": "iot-smart-water-2e339.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180559570099:android:4dd43cbd0c3d6bb8",
+        "android_client_info": {
+          "package_name": "iot.smart.water"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180559570099-oc9o19t6pdboahhv3sde151n2o4ln5mh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "iot.smart.water",
+            "certificate_hash": "f5813d24e3a434853e77b9353d1140cdffe97e32"
+          }
+        },
+        {
+          "client_id": "180559570099-impq3dnhuvs91vg8qmcrbav4iupeshbc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1ahcRBoy-7fk8rTDpMuv9PbsCEknVVAc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180559570099-impq3dnhuvs91vg8qmcrbav4iupeshbc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
