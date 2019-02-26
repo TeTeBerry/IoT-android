@@ -28,23 +28,6 @@
         <activity android:name=".ui.RegisterActivity" />
         <activity android:name=".ui.ManagerActivity" />
 
-        <activity android:name="com.example.application.water.MainActivity" />
-        <activity android:name="com.example.application.water.admin_login" />
-        <activity android:name="com.example.application.water.user_login" />
-        <activity android:name="com.example.application.water.admin_logged_in" />
-        <activity android:name="com.example.application.water.admin_signup" />
-        <activity android:name="com.example.application.water.user_signup" />
-        <activity android:name="com.example.application.water.add_user_data" />
-        <activity android:name="com.example.application.water.user_logged_in" />
-        <activity android:name="com.example.application.water.user_change_password" />
-        <activity android:name="com.example.application.water.EnterSocietyDetails" />
-        <activity android:name="com.example.application.water.bill" />
-        <activity android:name="com.example.application.water.admin_change_details" />
-        <activity android:name="com.example.application.water.admin_change_method" />
-        <activity android:name="com.example.application.water.admin_generate_statement" />
-        <activity android:name="com.example.application.water.update_balance" />
-
-
     </application>
 
 </manifest>
