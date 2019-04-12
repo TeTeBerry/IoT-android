@@ -70,7 +70,7 @@ public class ManagerActivity extends AppCompatActivity {
 
         mTimeTv = findViewById(R.id.timeTv);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        mTimeTv.setText(sdf.format(new Date(mMember.getCreation_dt())));
+        mTimeTv.setText(sdf.format(new Date(mMember.getCreateTime())));
 
         mPointsTv = findViewById(R.id.pointsTv);
         mPointsTv.setText(String.valueOf(mMember.getCredit()));

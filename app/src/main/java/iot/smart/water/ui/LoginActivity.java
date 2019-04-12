@@ -17,6 +17,7 @@ import iot.smart.water.bean.Member;
 import iot.smart.water.net.InterfaceRequest;
 import iot.smart.water.net.http.RequestCallback;
 import iot.smart.water.utils.CommUtil;
+import iot.smart.water.utils.HashUtil;
 import iot.smart.water.utils.SPUtil;
 
 public class LoginActivity extends AppCompatActivity {
@@ -67,13 +68,13 @@ public class LoginActivity extends AppCompatActivity {
 
             Member member = new Member();
             member.setMembername(userName);
-            member.setPassword(password);
+            member.setPassword(HashUtil.get(password));
             InterfaceRequest.login(member, Member.class, new RequestCallback<Member>() {
                 @Override
                 public void onSuccess(Member data) {
-                    if (data != null && data.getMembername() != null) {
-                        Log.d("tete", "username: " + data.getMembername());
-
+                    if (data != null) {
+                        Log.d("tete", "login success:\n" + data.toString());
+                        data.setPassword(HashUtil.get(password));
                         SPUtil.saveUser(LoginActivity.this, data);
                         Snackbar.make(mLoginBtn, R.string.login_success, Snackbar.LENGTH_SHORT).show();
 

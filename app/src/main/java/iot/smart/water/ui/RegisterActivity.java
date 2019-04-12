@@ -17,6 +17,7 @@ import iot.smart.water.bean.Member;
 import iot.smart.water.net.InterfaceRequest;
 import iot.smart.water.net.http.RequestCallback;
 import iot.smart.water.utils.CommUtil;
+import iot.smart.water.utils.HashUtil;
 import iot.smart.water.utils.SPUtil;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -102,15 +103,15 @@ public class RegisterActivity extends AppCompatActivity {
             Member member = new Member();
             member.setMembername(userName);
             member.setRoom(userRoom);
-            member.setMail(userMail);
+            member.setEmail(userMail);
             member.setTel(userTel);
-            member.setPassword(password);
+            member.setPassword(HashUtil.get(password));
             InterfaceRequest.register(member, Member.class, new RequestCallback<Member>() {
                 @Override
                 public void onSuccess(Member data) {
-                    if (data != null && data.getMembername() != null) {
-                        Log.d("tete", "username: " + data.getMembername());
-                        data.setPassword(password);
+                    if (data != null) {
+                        Log.d("tete", "register success:\n" + data.toString());
+                        data.setPassword(HashUtil.get(password));
                         SPUtil.saveUser(RegisterActivity.this, data);
                         Snackbar.make(mRegisterBtn, R.string.register_success, Snackbar.LENGTH_SHORT).show();
 
@@ -119,7 +120,7 @@ public class RegisterActivity extends AppCompatActivity {
                         setResult(RESULT_OK, intent);
                         finish();
                     } else {
-                        Snackbar.make(mRegisterBtn, "register fail: return message null", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(mRegisterBtn, "register fail: return null", Snackbar.LENGTH_SHORT).show();
                     }
                 }
 

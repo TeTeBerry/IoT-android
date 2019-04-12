@@ -67,18 +67,16 @@ public class HttpRequest {
                 try {
                     t = (T) new Gson().fromJson(result, beanClz);
                 } catch (Exception e) {
-
+                    e.printStackTrace();
+                    Log.e("tete", e.toString());
                 }
                 T finalT = t;
-                mHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (callback != null) {
-                            if (finalT != null) {
-                                callback.onSuccess(finalT);
-                            } else {
-                                callback.onFailed("json exception");
-                            }
+                mHandler.post(() -> {
+                    if (callback != null) {
+                        if (finalT != null) {
+                            callback.onSuccess(finalT);
+                        } else {
+                            callback.onFailed(result);
                         }
                     }
                 });
@@ -156,17 +154,15 @@ public class HttpRequest {
 
     public static <T> void doPostAsync(String url, String jsonParams, Class beanClz, final RequestCallback<T> callback) {
         RequestBody body = RequestBody.create(OkHttpHelper.APPLICATION_JSON, jsonParams);
+        Log.d("tete", "url:"  + url);
         final Request request = new Request.Builder().url(url).post(body).build();
 
         OkHttpHelper.enqueue(request, new Callback() {
             @Override
             public void onFailure(Call call, final IOException e) {
-                mHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (callback != null) {
-                            callback.onFailed(e.getMessage());
-                        }
+                mHandler.post(() -> {
+                    if (callback != null) {
+                        callback.onFailed(e.getMessage());
                     }
                 });
             }
@@ -179,18 +175,16 @@ public class HttpRequest {
                 try {
                     t = (T) new Gson().fromJson(result, beanClz);
                 } catch (Exception e) {
-
+                    e.printStackTrace();
+                    Log.e("tete", e.toString());
                 }
                 T finalT = t;
-                mHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (callback != null) {
-                            if (finalT != null) {
-                                callback.onSuccess(finalT);
-                            } else {
-                                callback.onFailed("json exception");
-                            }
+                mHandler.post(() -> {
+                    if (callback != null) {
+                        if (finalT != null) {
+                            callback.onSuccess(finalT);
+                        } else {
+                            callback.onFailed(result);
                         }
                     }
                 });

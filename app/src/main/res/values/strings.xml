@@ -15,7 +15,7 @@
     <string name="register_fail">Register Fail</string>
     <string name="input_username">Enter your username</string>
     <string name="input_room">Enter your room</string>
-    <string name="input_mail">Enter your mail</string>
+    <string name="input_mail">Enter your email</string>
     <string name="input_tel">Enter your tel</string>
     <string name="input_password">Enter your password</string>
     <string name="confirm_passowrd">Confirm your password</string>
