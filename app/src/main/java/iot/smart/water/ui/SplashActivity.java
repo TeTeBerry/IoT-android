@@ -49,8 +49,9 @@ public class SplashActivity extends AppCompatActivity {
         InterfaceRequest.login(member, Member.class, new RequestCallback<Member>() {
             @Override
             public void onSuccess(Member data) {
-                if (data != null && data.getMembername() != null) {
-                    Log.d("tete", "username: " + data.getMembername());
+                if (data != null) {
+                    Log.d("tete", "auto login success\n" + data.toString());
+                    data.setPassword(pair.second);
                     SPUtil.saveUser(SplashActivity.this, data);
                     ManagerActivity.startManagerActivity(SplashActivity.this, data);
                 } else {

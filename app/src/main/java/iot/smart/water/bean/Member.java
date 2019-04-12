@@ -7,9 +7,9 @@ public class Member implements Serializable {
     private String room;
     private String membername;
     private String password;
-    private String mail;
+    private String email;
     private String tel;
-    private long creation_dt;
+    private long createTime;
     private String token;
     private int credit;
     private float waterFlow;
@@ -46,12 +46,12 @@ public class Member implements Serializable {
         this.password = password;
     }
 
-    public String getMail() {
-        return mail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getTel() {
@@ -62,12 +62,12 @@ public class Member implements Serializable {
         this.tel = tel;
     }
 
-    public long getCreation_dt() {
-        return creation_dt;
+    public long getCreateTime() {
+        return createTime;
     }
 
-    public void setCreation_dt(long creation_dt) {
-        this.creation_dt = creation_dt;
+    public void setCreateTime(long createTime) {
+        this.createTime = createTime;
     }
 
     public String getToken() {
@@ -92,5 +92,21 @@ public class Member implements Serializable {
 
     public void setWaterFlow(float waterFlow) {
         this.waterFlow = waterFlow;
+    }
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "_id='" + _id + '\'' +
+                ", room='" + room + '\'' +
+                ", membername='" + membername + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", tel='" + tel + '\'' +
+                ", createTime=" + createTime +
+                ", token='" + token + '\'' +
+                ", credit=" + credit +
+                ", waterFlow=" + waterFlow +
+                '}';
     }
 }
